@@ -43,8 +43,8 @@ elif choice == "Retrieve Data":
                 st.error(f"❌ Incorrect passkey! Attempts remaining: {3 - util.failed_attempts}")
 
                 if util.failed_attempts >= 3:
-                    st.warning("🔒 Too many failed attempts! Redirecting to Login Page.")
-                    st.experimental_rerun()
+                    st.warning("🔒 Too many failed attempts! ")
+                    
         else:
             st.error("⚠️ Both fields are required!")
 
@@ -56,7 +56,7 @@ elif choice == "Login":
         if login_pass == "admin123":  # Hardcoded for demo, replace with proper auth
             global failed_attempts
             failed_attempts = 0
-            st.success("✅ Reauthorized successfully! Redirecting to Retrieve Data...")
-            st.experimental_rerun()
+            st.success("✅ Reauthorized successfully!")
+           
         else:
             st.error("❌ Incorrect password!")
