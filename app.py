@@ -24,7 +24,7 @@ elif choice == "Store Data":
             util.stored_data[encrypted_text] = {"encrypted_text": encrypted_text, "passkey": hashed_passkey}
             st.success("✅ Data stored securely!")
             st.write("Copy the cypertext below👇")
-            st.write(encrypted_text)
+            st.code(encrypted_text)
         else:
             st.error("⚠️ Both fields are required!")
 
